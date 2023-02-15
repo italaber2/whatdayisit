@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>What Day Is It?</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css"></style>
+  <script src="code.js" />
+  </script>
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="assets/logo.png" height="35" width="35">
+  </header>
+  <nav id="navBar">
+    <input type="button" id="btnLeft" id="1" onclick="checkDay(1);" value="Monday" />
+    <input type="button" class="btn" id="2" onclick="checkDay(2)" value="Tuesday" />
+    <input type="button" class="btn" id="3" onclick="checkDay(3)" value="Wednesday" />
+    <input type="button" class="btn" id="4" onclick="checkDay(4)" value="Thursday" />
+    <input type="button" class="btn" id="5" onclick="checkDay(5)" value="Friday" />
+    <input type="button" class="btn" id="6" onclick="checkDay(6, 7)" value="The Weekend" />
+    <input type="button" class="btn" onclick="generateGif()" value="Random" />
+    <input type="button" class="btn" onclick="clearText()" value="Reset" />
+  </nav>
+  <section>
+    <div id="media">
+      <img id="giphy" src="assets/beetle.png">
+    </div>
+    <div id="text">
+      <p id="displayText"></p>
+      <p id=mondayText>
+      <h1>Der Neue Beetle</h1>
+
+      Model: Volkswagen Beetle (Type 1)
+      Year: 1960
+      Body Style: Sedan
+      Engine: Flat-4 Air-Cooled
+      Horsepower: 36 @ 4,500 RPM
+      Torque: 72 Nm @ 2,600 RPM
+      Transmission: 4-Speed Manual
+      </p>
+      <input type="button" class="btn" onclick="clearText()" value="Reset" />
+    </div>
+  </section>
+</body>
+
+</html>
