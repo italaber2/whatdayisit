@@ -30,7 +30,7 @@ function clearText() {
 
 function generateGif() {
   fetch(
-    "https://api.giphy.com/v1/gifs/search?api_key=KPswvUugpOVuVvMVZoKOFR7P7931QBY8&q=monday%2C%20sad&limit=50"
+    "https://api.giphy.com/v1/gifs/search?api_key=KPswvUugpOVuVvMVZoKOFR7P7931QBY8&q=burrito&limit=50&rating=g"
   )
     .then((res) => res.json())
     .then((resJson) => {
@@ -40,14 +40,14 @@ function generateGif() {
     });
 }
 
-function changeColor() {
-  document.getElementById(day1).style.backgroundColor = "red";
-}
-
 //rewrite generateGif function with async await
-//make search dynamic for the different days
-//implement flexbox for giphy location on page
-//re-style buttons (website?)
+//make search dynamic for random button + static gif for days
+//re-style buttons (input type radio for more control)
+//set max width to control image size
+
+//function changeColor() {
+//  document.getElementById(day1).style.backgroundColor = "red";
+//}
 
 //  let randomGifResult = await randomGif.json();
 //  if (response.ok) {
@@ -57,3 +57,6 @@ function changeColor() {
 //    alert("HTTP-Error: " + response.status + "somebody done fucked up.");
 //  }
 //}
+//      "https://media.giphy.com/media/DffShiJ47fPqM/giphy.gif"; right day
+//https://media.giphy.com/media/6uGhT1O4sxpi8/giphy.gif wrong day
+//https://media.giphy.com/media/2alKkyRFPKRSU/giphy.gif weekend
