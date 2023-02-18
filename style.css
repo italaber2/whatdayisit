@@ -14,10 +14,12 @@ body {
 header {
   height: 10%;
   align-items: center;
-  text-align: center;
-  font-family: sans-serif;
   color: black;
-  font-size: 2em;
+}
+img#logo {
+  align-items: center;
+  color: black;
+  margin: 6px;
 }
 section {
   display: flex;
@@ -45,15 +47,34 @@ img#giphy {
   width: 100%;
   height: auto;
   float: left;
-  margin: 3px;
-  margin-left: 20px;
   padding: 10px;
 }
 div#text {
   flex: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
   background: white;
+  padding-left: 20px;
 }
-
+p#dayText {
+  text-align: left;
+  font-weight: bold;
+  font-size: 48px;
+  margin: -0.11em 0px 0.11em;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  color: #000000;
+  border: none;
+}
+p#copyText {
+  text-align: left;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  margin: -2px 0px 2px;
+  color: #000000;
+  border: none;
+}
 .btn {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;

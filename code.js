@@ -1,30 +1,36 @@
 function checkDay(day1, day2) {
   var randomResponses = [
-    "No, it's not :(",
-    "Cha",
-    "Ne",
-    "Nein",
-    "Nee",
-    "Nej",
-    "Ei",
-    "Nem",
-    "Ani",
-    "Nu",
+    "This is not the day you're looking for.",
+    "404: Day Not Found",
   ];
-  var currentWeekday = new Date().getDay();
-  document.getElementById(day1).style.backgroundColor = "red";
-  if (currentWeekday == day1 || currentWeekday == day2) {
-    document.getElementById("displayText").innerHTML = "HELL YES IT IS.";
+
+  //https://stackoverflow.com/questions/8836265/using-a-variable-value-to-call-an-array-element
+
+  var daysOfTheWeek = ["Mediocre Monday", "Taco Tuesday"];
+  var currentDay = new Date().getDay();
+  if (currentDay == day2) {
+    document.getElementById("dayText").innerHTML = daysOfTheWeek[1];
+    document.getElementById("copyText").innerHTML = "HELL YES IT IS.";
+    document.getElementById("giphy").src = "assets/rightDay.webp";
+    return;
+  } else if (currentDay == day2) {
+    document.getElementById("dayText").innerHTML = "The Weekend";
+    document.getElementById("copyText").innerHTML =
+      "The weekend, man, it's like a rug that ties the week together. Time to grab a White Russian, put on your bathrobe, and just let the days unfold. No rules, no responsibilities, just leisurely rolling with the punches. Whether you're bowling, hanging with friends, or just enjoying a good time, the weekend is all about embracing the laid-back life. So grab a drink, take it easy, and just go with the flow, man. The weekend, it's just what the doctor ordered.";
+    document.getElementById("giphy").src = "assets/theWeekend.webp";
     return;
   } else {
-    document.getElementById("displayText").innerHTML =
+    document.getElementById("copyText").innerHTML =
       randomResponses[Math.floor(Math.random() * randomResponses.length)];
+    document.getElementById("giphy").src = "assets/wrongDay.webp";
     return;
   }
 }
 
-function clearText() {
-  document.getElementById("displayText").innerHTML = "";
+function resetAll() {
+  document.getElementById("dayText").innerHTML = "Der Neue Beetle";
+  document.getElementById("copyText").innerHTML =
+    "Model: Volkswagen Beetle (Type 1) | Year: 1960 | Body Style: Sedan | Engine: Flat-4 Air-Cooled | Horsepower: 36 @ 4,500 RPM | Torque: 72 Nm @ 2,600 RPM | Transmission: 4-Speed Manual";
   document.getElementById("giphy").src = "assets/beetle.png";
 }
 
@@ -41,22 +47,5 @@ function generateGif() {
 }
 
 //rewrite generateGif function with async await
-//make search dynamic for random button + static gif for days
 //re-style buttons (input type radio for more control)
 //set max width to control image size
-
-//function changeColor() {
-//  document.getElementById(day1).style.backgroundColor = "red";
-//}
-
-//  let randomGifResult = await randomGif.json();
-//  if (response.ok) {
-//    document.getElementById("giphy").src =
-//      randomGifResult.data.images.original.url;
-//  } else {
-//    alert("HTTP-Error: " + response.status + "somebody done fucked up.");
-//  }
-//}
-//      "https://media.giphy.com/media/DffShiJ47fPqM/giphy.gif"; right day
-//https://media.giphy.com/media/6uGhT1O4sxpi8/giphy.gif wrong day
-//https://media.giphy.com/media/2alKkyRFPKRSU/giphy.gif weekend
