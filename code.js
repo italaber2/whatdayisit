@@ -43,6 +43,10 @@ function checkDay(clickedDay) {
   }
 }
 
+function tofu() {
+  document.getElementById("giphy").src = "assets/tofu.webp";
+}
+
 function resetAll() {
   document.getElementById("dayText").innerHTML = "Der Neue Beetle";
   document.getElementById("copyText").innerHTML =
@@ -52,7 +56,7 @@ function resetAll() {
 
 function generateGif() {
   fetch(
-    "https://api.giphy.com/v1/gifs/search?api_key=KPswvUugpOVuVvMVZoKOFR7P7931QBY8&q=burrito&limit=50&rating=g"
+    "https://api.giphy.com/v1/gifs/search?api_key=KPswvUugpOVuVvMVZoKOFR7P7931QBY8&q=tofu&limit=50&rating=pg"
   )
     .then((res) => res.json())
     .then((resJson) => {
@@ -62,6 +66,25 @@ function generateGif() {
     });
 }
 
-//rewrite generateGif function with async await
-//re-style buttons (input type radio for more control)
+function toggleVisibility(button) {
+  let buttonList = document.querySelectorAll(".btn");
+  if (
+    document.getElementById(button).style.backgroundColor == "" ||
+    document.getElementById(button).style.backgroundColor ==
+      "rgb(244, 244, 244)"
+  ) {
+    buttonList.forEach(
+      (el) => (el.style.backgroundColor = "rgb(244, 244, 244)")
+    );
+    buttonList.forEach((el) => (el.style.color = "rgb(1, 30, 80)"));
+    buttonList.forEach((el) => (el.style.fontWeight = "normal"));
+    document.getElementById(button).style.backgroundColor = "rgb(1, 30, 80)";
+    document.getElementById(button).style.color = "white";
+    document.getElementById(button).style.fontWeight = "bold";
+  } else {
+    console.log(button);
+    console.log(document.getElementById(button).style);
+  }
+}
+
 //set max width to control image size

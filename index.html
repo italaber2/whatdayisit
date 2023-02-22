@@ -10,17 +10,17 @@
 
 <body>
   <header>
-    <img id="logo" src="assets/logo.png" height="35" width="35">
+    <img id="logo" src="assets/logo.png" height="35" width="35" onclick="tofu()">
   </header>
   <nav id="navBar">
-    <input type="button" class="btn" id="1" onclick="checkDay(1);" value="Monday" />
-    <input type="button" class="btn" id="2" onclick="checkDay(2)" value="Tuesday" />
-    <input type="button" class="btn" id="3" onclick="checkDay(3)" value="Wednesday" />
-    <input type="button" class="btn" id="4" onclick="checkDay(4)" value="Thursday" />
-    <input type="button" class="btn" id="5" onclick="checkDay(5)" value="Friday" />
-    <input type="button" class="btn" id="6" onclick="checkDay(6)" value="The Weekend" />
-    <input type="button" class="btn" onclick="generateGif()" value="Random" />
-    <input type="button" class="btn" onclick="resetAll()" value="Reset" />
+    <input type="button" class="btn" id="1" onclick="checkDay(1);toggleVisibility(1)" value="Monday" />
+    <input type="button" class="btn" id="2" onclick="checkDay(2);toggleVisibility(2)" value="Tuesday" />
+    <input type="button" class="btn" id="3" onclick="checkDay(3);toggleVisibility(3)" value="Wednesday" />
+    <input type="button" class="btn" id="4" onclick="checkDay(4);toggleVisibility(4)" value="Thursday" />
+    <input type="button" class="btn" id="5" onclick="checkDay(5);toggleVisibility(5)" value="Friday" />
+    <input type="button" class="btn" id="6" onclick="checkDay(6);toggleVisibility(6)" value="The Weekend" />
+    <input type="button" class="btn" id="7" onclick="generateGif();toggleVisibility(7)" value="Random" />
+    <input type="button" class="btn" id="8" onclick="resetAll();toggleVisibility(8)" value="Reset" />
   </nav>
   <section>
     <div id="media">
