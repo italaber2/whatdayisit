@@ -56,7 +56,7 @@ function resetAll() {
 
 function generateGif() {
   fetch(
-    "https://api.giphy.com/v1/gifs/search?api_key=KPswvUugpOVuVvMVZoKOFR7P7931QBY8&q=tofu&limit=50&rating=pg"
+    "https://api.giphy.com/v1/gifs/search?api_key=KPswvUugpOVuVvMVZoKOFR7P7931QBY8&q=funny&limit=50&rating=pg"
   )
     .then((res) => res.json())
     .then((resJson) => {
