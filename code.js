@@ -87,4 +87,5 @@ function toggleVisibility(button) {
   }
 }
 
-//set max width to control image size
+//set text for random button
+//set specific text for specific gif on wrong day
