@@ -61,7 +61,7 @@ function checkDay(clickedDay) {
 function tofu() {
   document.getElementById("giphy").src = "assets/tofu.webp";
   document.getElementById("dayText").innerHTML = "Tofu";
-  document.getElementById("dayText").innerHTML = "Greatness!";
+  document.getElementById("copyText").innerHTML = "Greatness!";
 }
 
 function resetAll() {
