@@ -1,0 +1,24 @@
+{
+  "name": "whatdayisit2",
+  "version": "1.0.0",
+  "description": "Friday, always Friday.",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tacofish": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/italaber2/whatdayisit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/italaber2/whatdayisit/issues"
+  },
+  "homepage": "https://github.com/italaber2/whatdayisit#readme",
+  "devDependencies": {
+    "cypress": "^12.7.0",
+    "dark": "^0.0.2-2"
+  }
+}
