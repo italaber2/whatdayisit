@@ -1,29 +1,6 @@
-function checkDay(clickedDay) {
-  var randomResponses = [
-    "This is not the day you're looking for.",
-    "404: Day Not Found",
-    "Nothing to see here...",
-    "Congratulations! You're wrong.",
-    "Your only job was to pick the correct day... try again.",
-    "You seem to be a little lost.",
-  ];
-  var randomGif = [
-    "assets/wrongDroids.webp",
-    "assets/404dayNotFound.webp",
-    "assets/nothingToSee.webp",
-    "assets/wrongDayAward.webp",
-    "assets/pickTheRightDay.webp",
-    "assets/wrongDay.webp",
-  ];
-  var daysOfTheWeek = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "The Weekend",
-    "The Office",
-  ];
+import { randomResponses, randomGif, daysOfTheWeek } from "./data.js";
+
+export function checkDay(clickedDay) {
   var daysOfTheWeekCopyText = ["Yes, it's exactly the day you want it to be."];
   var currentDay = new Date().getDay();
   if (currentDay == clickedDay && currentDay < 6 && currentDay != 0) {
@@ -110,3 +87,9 @@ function toggleVisibility(button) {
     );
   }
 }
+
+window.checkDay = checkDay;
+window.tofu = tofu;
+window.toggleVisibility = toggleVisibility;
+window.generateGif = generateGif;
+window.resetAll = resetAll;
